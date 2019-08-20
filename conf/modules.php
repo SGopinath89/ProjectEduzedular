@@ -1,8 +1,8 @@
 <?php
 	Define('SERVER','localhost');
-	Define('USER','Eduzeduler');
-	Define('PASSWORD','abc');
-	Define('DB','modules');
+	Define('USER','eduzeduler');
+	Define('PASSWORD','eduzeduler2019');
+	Define('DB','esduzedulerdb');
 
 	//Make a connection
 	$conn = mysqli_connect(SERVER,USER,PASSWORD,DB);
