@@ -1,4 +1,5 @@
 <?php
+
 function GetAllModules($conn)
 {
 	$modules = array();
@@ -27,3 +28,5 @@ function GetAllModules($conn)
 
 	return $modules;
 }
+
+//print_r(GetAllModules($conn));
