@@ -1,4 +1,5 @@
  <!-- Portfolio Grid -->
+ 
   <section class="bg-light page-section" id="portfolio">
     <div class="container">
       <div class="row">
@@ -8,6 +9,11 @@
         </div>
       </div>
       <div class="row">
+        <?php
+           $portfolio = GetAllModules($conn);
+           foreach ($portfolio as $key => $value) {
+
+ ?>
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
             <div class="portfolio-hover">
@@ -15,13 +21,18 @@
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/02.jpg" alt="" height="50" width="320" >
+            <img class="img-fluid" src="<?php echo $value['ImgPath'];  ?>" alt="" height="50" width="320" >
           </a>
           <div class="portfolio-caption">
-            <h4>Boolean Expressions</h4>
-            <p class="text-muted">Unit:01</p>
+            <h4><?php echo $value['Title'];  ?></h4>
+            <p class="text-muted"><?php echo $value['Description'];  ?></p>
           </div>
         </div>
+    <?php
+      //
+           }
+    ?>
+        <!--
         <div class="col-md-4 col-sm-6 portfolio-item">
           <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
             <div class="portfolio-hover">
@@ -92,6 +103,7 @@
             <p class="text-muted">Unit:06</p>
           </div>
         </div>
+      -->
       </div>
     </div>
   </section>
