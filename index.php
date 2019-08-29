@@ -1,8 +1,6 @@
 <?php
 	require_once 'conf/config.php';
 	require_once 'fun/function.php';
-	require_once 'fun/functionModels.php';
-	
 	include_once  'view/header.php';
 ?>
 <body id="page-top">
