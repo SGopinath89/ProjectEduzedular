@@ -93,3 +93,34 @@ function GetAllModelOutlines($conn)
 }
 //print_r(GetAllModelOutlines($conn));
 
+//Sub modules  contents part
+function GetAllModuleContents($conn)
+{
+	$contents = array();
+	$i = 0;
+	$query = "select * from submodules";
+	$result = mysqli_query($conn,$query);
+		if ($result) {
+			$num_of_rows = mysqli_num_rows($result);
+			if ($num_of_rows > 0) {
+				while ($row = mysqli_fetch_assoc($result)) {
+					$contents[$i] = $row;
+					$i++;
+				}
+				mysqli_free_result($result);
+			}
+			else{
+			//table empty
+			$contents = null;
+		}
+			
+		}
+		else{
+			//error
+			$contents = null;
+		}
+
+	return $contents;
+}
+//print_r(GetAllModelOutlines($conn));
+

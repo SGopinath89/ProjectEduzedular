@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2019 at 05:36 PM
+-- Generation Time: Sep 02, 2019 at 05:47 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -48,6 +48,7 @@ INSERT INTO `buttons` (`ButtonId`, `Title`) VALUES
 CREATE TABLE IF NOT EXISTS `moduleoutline` (
   `OutlineID` varchar(10) NOT NULL,
   `Title` varchar(100) NOT NULL,
+  `link` varchar(100) NOT NULL,
   PRIMARY KEY (`OutlineID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -55,13 +56,13 @@ CREATE TABLE IF NOT EXISTS `moduleoutline` (
 -- Dumping data for table `moduleoutline`
 --
 
-INSERT INTO `moduleoutline` (`OutlineID`, `Title`) VALUES
-('out01', 'NUMBER SYSTEMS & BOOLEAN EXPRESSIONS.'),
-('out02', 'Operating Systems'),
-('out03', 'Computer Network'),
-('out04', 'DBMS'),
-('out05', 'Programming Concept'),
-('out06', 'Web Development');
+INSERT INTO `moduleoutline` (`OutlineID`, `Title`, `link`) VALUES
+('out01', 'NUMBER SYSTEMS & BOOLEAN EXPRESSIONS.', '#portfolioModal1'),
+('out02', 'Operating Systems', '#portfolioModal2'),
+('out03', 'Computer Network', '#portfolioModal3'),
+('out04', 'DBMS', '#portfolioModal4'),
+('out05', 'Programming Concept', '#portfolioModal5'),
+('out06', 'Web Development', '#portfolioModal6');
 
 -- --------------------------------------------------------
 
