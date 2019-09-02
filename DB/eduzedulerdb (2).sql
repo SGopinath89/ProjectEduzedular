@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2019 at 08:06 AM
+-- Generation Time: Sep 02, 2019 at 05:36 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `modules` (
 INSERT INTO `modules` (`ModuleId`, `Title`, `PastpaperID`, `VideoId`, `Description`, `ImgPath`, `link`) VALUES
 ('ALICTM01', 'Boolean Expressions', 'ALICTP01', 'ALICTV01', 'Unit:01', 'img/portfolio/02.jpg', '#portfolioModal1'),
 ('ALICTM02', 'Operating Systems', 'ALICTP02', 'ALICTV02', 'Unit:02', 'img/portfolio/03.png', '#portfolioModal2'),
-('ALICTM03', 'Computer Network', 'ALICTP03', 'ALICTV03', 'Unit:03', 'img/portfolio/04.jpg', 'portfolioModal3'),
+('ALICTM03', 'Computer Network', 'ALICTP03', 'ALICTV03', 'Unit:03', 'img/portfolio/04.jpg', '#portfolioModal3'),
 ('ALICTM04', 'DBMS', 'ALICTP04', 'ALICTV04', 'Unit:04', 'img/portfolio/05.jpg', '#portfolioModal4'),
 ('ALICTM05', 'Programming Concept', 'ALICTP05', 'ALICTV05', 'Unit:05', 'img/portfolio/09.jpg', '#portfolioModal5'),
 ('ALICTM06', 'Web Development', 'ALICTP06', 'ALICTV06', 'Unit:06', 'img/portfolio/10.jpg', '#portfolioModal6');
@@ -125,6 +125,74 @@ INSERT INTO `reference` (`RefId`, `Title`, `Description`, `ImgPath`) VALUES
 ('Ref01', 'Guide-01', 'Whole syllabus of Grade 12.', 'img/team/1.jpg'),
 ('Ref02', 'Guide-02', 'Whole syllabus of Grade 13.', 'img/team/2.jfif'),
 ('Ref03', 'Practice paper!', 'Most expected questions.', 'img/team/3.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `submodules`
+--
+
+CREATE TABLE IF NOT EXISTS `submodules` (
+  `SubModuleId` varchar(8) NOT NULL,
+  `Title` varchar(100) NOT NULL,
+  `OutlineID` varchar(8) NOT NULL,
+  PRIMARY KEY (`SubModuleId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `submodules`
+--
+
+INSERT INTO `submodules` (`SubModuleId`, `Title`, `OutlineID`) VALUES
+('', '', ''),
+('SM001', 'Data & Information', 'out01'),
+('SM002', 'Generations of Computers', 'out01'),
+('SM003', 'Inventions related with computers', 'out01'),
+('SM004', 'Von Neumann architecture', 'out01'),
+('SM005', 'Number Systems', 'out01'),
+('SM006', 'Logic Gates', 'out01'),
+('SM007', 'Laws in boolean algebra', 'out01'),
+('SM008', 'Karnaugh Map', 'out01'),
+('SM009', 'SOP & POS formats in boolean expressions', 'out01'),
+('SM010', 'Half & Full adder circuits', 'out01'),
+('SM011', 'Flipflops', 'out01'),
+('SM012', 'Types Softwares', 'out02'),
+('SM013', 'System Softwares', 'out02'),
+('SM014', 'Types of operating systems', 'out02'),
+('SM015', 'User Interfaces', 'out02'),
+('SM016', 'services of operating systems', 'out02'),
+('SM017', 'Device Management', 'out02'),
+('SM018', 'Process Management', 'out02'),
+('SM019', 'Memory Management', 'out02'),
+('SM020', 'File Management', 'out02'),
+('SM021', 'Security Management', 'out02'),
+('SM022', 'Network Management', 'out02'),
+('SM023', 'Data Communication', 'out03'),
+('SM024', 'Network Types & Topologies', 'out03'),
+('SM025', 'Network connectivity devices', 'out03'),
+('SM026', 'Pulse Code Modulation', 'out03'),
+('SM027', 'Multiplexing', 'out03'),
+('SM028', 'IP address & MAC address', 'out03'),
+('SM029', 'Network  Reference models', 'out03'),
+('SM030', 'Database', 'out04'),
+('SM031', 'Database Models', 'out04'),
+('SM032', 'Keys in database', 'out04'),
+('SM033', 'ER diagram', 'out04'),
+('SM034', 'SQL', 'out04'),
+('SM035', 'EER diagram', 'out04'),
+('SM036', 'Integrity constraints', 'out04'),
+('SM037', 'Generations of programming languages', 'out05'),
+('SM038', 'Python programming', 'out05'),
+('SM039', 'Data types in python', 'out05'),
+('SM040', 'User inputs', 'out05'),
+('SM041', 'Loops', 'out05'),
+('SM042', 'Functions', 'out05'),
+('SM043', 'Errors in programming', 'out05'),
+('SM044', 'HTML', 'out06'),
+('SM045', 'CSS', 'out06'),
+('SM046', 'PHP', 'out06'),
+('SM047', 'Types of Web pages', 'out06'),
+('SM048', 'Web site publishing', 'out06');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -1,5 +1,5 @@
 <?php
-
+	//require_once '../conf/config.php';
 function GetAllModules($conn)
 {
 	$modules = array();
@@ -30,7 +30,7 @@ function GetAllModules($conn)
 }
 
 //print_r(GetAllModules($conn));
-
+//Buttons part
 function GetAllButtons($conn)
 {
 	$btn = array();
@@ -61,9 +61,11 @@ function GetAllButtons($conn)
 }
 //print_r(GetAllModels($conn));
 
-function GetAllModels($conn)
+
+//Sub modules part
+function GetAllModelOutlines($conn)
 {
-	$modules = array();
+	$submodules = array();
 	$i = 0;
 	$query = "select * from moduleoutline";
 	$result = mysqli_query($conn,$query);
@@ -71,22 +73,23 @@ function GetAllModels($conn)
 			$num_of_rows = mysqli_num_rows($result);
 			if ($num_of_rows > 0) {
 				while ($row = mysqli_fetch_assoc($result)) {
-					$models[$i] = $row;
+					$submodules[$i] = $row;
 					$i++;
 				}
 				mysqli_free_result($result);
 			}
 			else{
 			//table empty
-			$models = null;
+			$submodules = null;
 		}
 			
 		}
 		else{
 			//error
-			$models = null;
+			$submodules = null;
 		}
 
-	return $models;
+	return $submodules;
 }
-//print_r(GetAllModels($conn));
+//print_r(GetAllModelOutlines($conn));
+
