@@ -8,8 +8,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
+            <?php 
+               $rows=GetMenus($conn); 
+               foreach ($rows as $key => $value) { 
+     
+   ?> 
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Intro</a>
+             <a class="nav-link js-scroll-trigger" href="<?php echo $value['Page'];?>"><?php echo $value['Title'];?></a>
+            </li>
+           <!--<a class="nav-link js-scroll-trigger" href="#services">Intro</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#portfolio">Modules</a>
@@ -21,7 +28,11 @@
             <a class="nav-link js-scroll-trigger" href="#team">References</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>-->
+            <?php
+             }
+
+        ?>
           </li>
         </ul>
       </div>
