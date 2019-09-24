@@ -20,7 +20,7 @@
                   <i class="fab fa-twitter"></i>
                 </a> -->
               </li>
-			  <a href=""> <i>Click here! </i></a> to download Gr:12 guide
+			  <a href="http://nie.lk/selesylltg"> <i>Click here! </i></a> to download Gr:12 guide
               <li class="list-inline-item">
                 <!-- <a href="#">
                   <i class="fab fa-facebook-f"></i>
@@ -50,7 +50,7 @@
                   <i class="fab fa-facebook-f"></i>
                 </a>-->
               </li>
-			  <a href=""> <i>Click here! </i></a> to download Gr:13 guide
+			  <a href="http://nie.lk/selesylltg"> <i>Click here! </i></a> to download Gr:13 guide
               <li class="list-inline-item">
                 <!-- <a href="#">
                   <i class="fab fa-linkedin-in"></i>
@@ -70,7 +70,7 @@
                   <i class="fab fa-twitter"></i>
                 </a>-->
               </li>
-			  <a href=""> <i>Click here! </i></a> to download Model Paper
+			  <a href="http://www.itguru.lk/model-papers.html"> <i>Click here! </i></a> to download Model Paper
               <li class="list-inline-item">
                  <!--<a href="#">
                   <i class="fab fa-facebook-f"></i>
