@@ -29,6 +29,21 @@ function GetAllModules($conn)
 	return $modules;
 }
 
+function GetPastpaperForBtn($conn,$pastpaper_id)
+{
+	$query="select * from pastpaper where id = '".$pastpaper_id."'";
+	$result=mysqli_query($conn,$query);
+
+	$pastpaper=null;
+
+	while ($row=mysqli_fetch_array($result)) {
+		$pastpaper=$row;
+	}
+
+	return $pastpaper;
+
+}
+
 //print_r(GetAllModules($conn));
 //Buttons part
 function GetAllButtons($conn)
@@ -94,32 +109,19 @@ function GetAllModelOutlines($conn)
 //print_r(GetAllModelOutlines($conn));
 
 //Sub modules  contents part
-function GetAllModuleContents($conn)
+function GetAllModuleContents($conn,$outid)
 {
 	$contents = array();
-	$i = 0;
-	$query = "select * from submodules";
+	$i=0;
+	$query = "select * from submodules where OutlineID = '".$outid."'";
 	$result = mysqli_query($conn,$query);
-		if ($result) {
-			$num_of_rows = mysqli_num_rows($result);
-			if ($num_of_rows > 0) {
-				while ($row = mysqli_fetch_assoc($result)) {
-					$contents[$i] = $row;
-					$i++;
-				}
-				mysqli_free_result($result);
-			}
-			else{
-			//table empty
-			$contents = null;
+	if ($result) {
+		while ($row = mysqli_fetch_array($result)) {
+			$contents[$i] = $row;	
+			$i++;
 		}
+	}
 			
-		}
-		else{
-			//error
-			$contents = null;
-		}
-
 	return $contents;
 }
 //print_r(GetAllModelOutlines($conn));
